@@ -38,7 +38,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="#about">Dokumen</a></li>
+          <li><a class="nav-link scrollto {{ request()->is('dokumen') ? 'active' : '' }}" href="{{ url("/dokumen") }}">Dokumen</a></li>
           <li><a class="nav-link scrollto {{ request()->is('galeri') ? 'active' : '' }}" href="{{ url('/galeri') }}">Galeri</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">SOP</a></li>
           <li><a class="nav-link scrollto" href="#team">Laporan Kinerja</a></li>
@@ -103,8 +103,8 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Link Pintasan</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Dokumen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/') }}">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url("/dokumen") }}">Dokumen</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ url('/galeri') }}">Galeri</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>

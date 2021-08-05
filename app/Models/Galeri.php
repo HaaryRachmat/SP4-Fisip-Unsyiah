@@ -15,4 +15,10 @@ class Galeri extends Model
         'tanggal',
         'deskripsi'
     ];
+
+    public function getAdditionalPhotos()
+    {
+        // return $this->hasMany('App\Models\AdditionalPhotos');
+        return $this->hasMany(AdditionalPhotos::class, 'galeri_id', 'id');
+    }
 }

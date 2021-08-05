@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Livewire\AdminDokumen;
 use App\Http\Livewire\AdminGaleri;
 use App\Http\Livewire\Beranda;
+use App\Http\Livewire\Dokumen;
 use App\Http\Livewire\Galeri;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', Beranda::class);
 Route::get('/galeri', Galeri::class);
+Route::get('/dokumen', Dokumen::class);
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::get('/dashboard', function () {
@@ -28,4 +31,5 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     })->name('dashboard');
 
     Route::get('admin-galeri', AdminGaleri::class)->name('admin-galeri');
+    Route::get('/admin-dokumen', AdminDokumen::class)->name('admin-dokumen');
 });
